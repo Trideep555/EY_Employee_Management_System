@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mukta:wght@200;300;400;500;600;700;800&family=Ovo&display=swap');
+:root{
+  --white:#fff;
+  --black:#000;
+  
+  --dark:#171615;
+  --gray:#4d5156;
+  --lite:#e3e3e3;
+  
+  --primary:#7963F9;
+  --primary_lite:#74DFEF;
+  --primary_dark:#181E2B;
+}
+
+
+
+
+:root{
+  --title_font:"Montserrat", sans-serif;
+  --default_font:"Mukta", sans-serif;
+  --styled_font:"Ovo", serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
