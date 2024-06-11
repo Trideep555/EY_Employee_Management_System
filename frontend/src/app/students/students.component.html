@@ -1,0 +1,171 @@
+
+<div class="body">
+    <div class="d-flex justify-content-center">
+        <button class="mt-2 mb-2 my-b" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-square-plus"></i>&nbsp;&nbsp;Create
+        </button>
+    </div>
+<table class="container2">
+    <thead>
+        <tr>
+            <th><h1>Name</h1></th>
+            <th><h1>Email</h1></th>
+            <th><h1>Phone</h1></th>
+            <th><h1>Address</h1></th>
+            <th><h1>Department</h1></th>
+            <th><h1>Actions</h1></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of (mydata | async);let i=index">
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.phone}}</td>
+            <td>{{user.address}}</td>
+            <td>{{user.department}}</td>
+            <td>
+                <i class="fa-solid fa-pen-to-square" (click)="HandleEdit(user)" data-bs-toggle="modal" data-bs-target="#exampleModal2"></i>&nbsp;&nbsp;
+                <i class="fa-solid fa-trash"  data-bs-toggle="modal" data-bs-target="#exampleModal3" (click)="HandleDeleteSubmit(user)"></i>
+            </td>
+        
+    </tr>
+    </tbody>
+</table>
+</div>
+<app-footer></app-footer>
+<div class="container mt-5">
+ 
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered">
+  <div class="modal-content">
+    <div class="modal-header d-flex justify-content-between">
+      <h4 class="modal-title" id="exampleModalLabel">Add Employees</h4>
+        <i class="fa-regular fa-circle-xmark" style="font-size: 32px;cursor: pointer;" data-bs-dismiss="modal" ></i>
+    </div>
+    <div class="modal-body">
+            <div class="form-group">
+                <div class="group">
+                    <input required="" type="text" class="input" [(ngModel)]="AddData.name">
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Name</label>
+                  </div>
+                  <div class="group">
+                    <input required="" type="text" class="input" [(ngModel)]="AddData.email">
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Email</label>
+                  </div>
+                  <div class="group">
+                    <input required="" type="text" class="input" [(ngModel)]="AddData.phone">
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Phone</label>
+                  </div>
+                  <div class="group">
+                    <input required="" type="text" class="input" [(ngModel)]="AddData.address">
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Address</label>
+                  </div>
+                  <div class="group">
+                    <input required="" type="text" class="input" [(ngModel)]="AddData.department">
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Department</label>
+                  </div>
+            </div>
+        
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-success" (click)="HandleSubmit()">Submit</button>
+      <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+</div>
+
+</div>
+<div class="container mt-5">
+ 
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header d-flex justify-content-between">
+          <h4 class="modal-title" id="exampleModalLabel">Edit Employees</h4>
+            <i class="fa-regular fa-circle-xmark" style="font-size: 32px;cursor: pointer;" data-bs-dismiss="modal" ></i>
+        </div>
+        <div class="modal-body">
+                <div class="form-group">
+                    <div class="group">
+                        <input required="" type="text" class="input" [(ngModel)]="EditData.name">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Name</label>
+                      </div>
+                      <div class="group">
+                        <input required="" type="text" class="input" [(ngModel)]="EditData.email">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Email</label>
+                      </div>
+                      <div class="group">
+                        <input required="" type="text" class="input" [(ngModel)]="EditData.phone">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Phone</label>
+                      </div>
+                      <div class="group">
+                        <input required="" type="text" class="input" [(ngModel)]="EditData.address">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Address</label>
+                      </div>
+                      <div class="group">
+                        <input required="" type="text" class="input" [(ngModel)]="EditData.department">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Department</label>
+                      </div>
+                </div>
+            
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-success" (click)="HandleEditSubmit()">Submit</button>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+    </div>
+    
+    </div>
+
+    <div class="container mt-5">
+ 
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header d-flex justify-content-between">
+              <h4 class="modal-title" id="exampleModalLabel">Delete Employees</h4>
+                <i class="fa-regular fa-circle-xmark" style="font-size: 32px;cursor: pointer;" data-bs-dismiss="modal" ></i>
+            </div>
+            <div class="modal-body">
+                    Are You Sure you Want to Delete ?
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" (click)="HandleEditDelete()">Submit</button>
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+        </div>
+        
+        </div>
+        
+    
