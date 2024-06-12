@@ -6,7 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { StudentsComponent } from './students/students.component';
 
 export const routes: Routes = [
-    {path:"", pathMatch:"full",component:HomeComponent },
+    {path:"", pathMatch:"full",component:HomeComponent},
     {path:"about",component:AboutComponent},
     {path:"contact",component:ContactComponent},
     {path:"login",component:LoginComponent},
