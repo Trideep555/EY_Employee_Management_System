@@ -1,9 +1,24 @@
 
 <div class="body">
-    <div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center top-bar" >
+    <div class="d-flex justify-content-between mb-3 mx-5" style="width:80%">
+      <form class="form mt-2">
+        <button (click)="Search(search.value)">
+            <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="search">
+                <path d="M7.667 12.667A5.3393 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9" stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+        </button>
+        <input class="input" style="border: none;font-size: 0.9rem;" placeholder="Search By Name" required="" type="text" #search>
+        <button class="reset" type="reset" (click)="Search('')" >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+    </form>
         <button class="mt-2 mb-2 my-b" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-square-plus"></i>&nbsp;&nbsp;Create
         </button>
     </div>
+  </div>
 <table class="container2">
     <thead>
         <tr>
@@ -23,8 +38,8 @@
             <td>{{user.address}}</td>
             <td>{{user.department}}</td>
             <td>
-                <i class="fa-solid fa-pen-to-square" (click)="HandleEdit(user)" data-bs-toggle="modal" data-bs-target="#exampleModal2"></i>&nbsp;&nbsp;
-                <i class="fa-solid fa-trash"  data-bs-toggle="modal" data-bs-target="#exampleModal3" (click)="HandleDeleteSubmit(user)"></i>
+                <i class="fa-solid fa-pen-to-square" style="cursor: pointer;" (click)="HandleEdit(user)" data-bs-toggle="modal" data-bs-target="#exampleModal2"></i>&nbsp;&nbsp;
+                <i class="fa-solid fa-trash" style="cursor: pointer;"  data-bs-toggle="modal" data-bs-target="#exampleModal3" (click)="HandleDeleteSubmit(user)"></i>
             </td>
         
     </tr>

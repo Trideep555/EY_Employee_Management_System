@@ -82,4 +82,13 @@ export class StudentsComponent {
    })
    this.DeleteData=0;
   }
+  Search(value:string){
+    if(value==""){
+      this.mydata=this.http.get<Student[]>("http://localhost:5172/api/Employees");
+    }
+    else{
+      this.mydata=this.http.get<Student[]>(`http://localhost:5172/api/employees/search?keyword=${value}`);
+      
+    }
+  }
 }
