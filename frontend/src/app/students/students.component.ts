@@ -33,6 +33,9 @@ export class StudentsComponent {
   };
   DeleteData: number =0;
   constructor(private http:HttpClient){
+    if(localStorage.getItem("admin")==null){
+      window.location.pathname="/";
+    }
    this.mydata=this.http.get<Student[]>("http://localhost:5172/api/Employees");
    
   }

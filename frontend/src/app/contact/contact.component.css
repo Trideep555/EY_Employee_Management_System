@@ -12,7 +12,6 @@ body {
 }
 
 .container2 {
-
 	position: relative;
 	overflow: hidden;
 	width: 90vw;
@@ -39,7 +38,7 @@ h2 {
   display:flex;
   flex:1;
   height:89vh;
-  background-color: white;
+  background-color: ivory;
   justify-content:center;
   align-items:center;
 }
