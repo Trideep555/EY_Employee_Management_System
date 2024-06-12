@@ -1,6 +1,7 @@
 .body{
     background-color: #181E2B;
     min-height: 100vh;
+    font-family: 'Times New Roman', Times, serif;
 }
 h1{
 	font-size: 3em;
@@ -89,13 +90,12 @@ table{
 }
 
 .container2 td:hover{
-	background-color: #FFF842;
-	color: #403E10;
+	background-color: #7963F9;
+	color: white;
 	font-weight: bold;
-	box-shadow: #7F7C21 -1px  1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
-	transform: translate3d(6px, -6px, 0);
+	box-shadow: #7963F9 , #7963F9 , #7963F9 , #7963F9 , #7963F9 , #7963F9 ;
 	transition-delay: 0s;
-	transition-duration: 0.4s;
+	transition-duration: 0.2s;
 	transition-property: all;
 	transition-timing-function: line;
 }
@@ -316,4 +316,8 @@ table{
       .form svg {
         width: 17px;
         margin-top: 3px;
+      }
+
+      .modal{
+        font-family: 'Times New Roman', Times, serif;
       }

@@ -29,6 +29,7 @@
 	font-weight: 400;
 	color: #8b8b99;
 	letter-spacing: 0.5px;
+	
 }
 
 .contacts-break {
@@ -59,7 +60,7 @@ input, textarea {
 #contacts #btn-submit {
 	font-weight: 600;
 	color: white;
-	background-color: rgb(170, 210, 54);
+	background-color: #7963F9;
 	padding: 9px 34px;
 	text-transform: uppercase;
 	border: 0;
