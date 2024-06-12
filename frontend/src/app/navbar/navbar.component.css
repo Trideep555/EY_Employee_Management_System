@@ -292,7 +292,7 @@ nav{
 .logo img{
   max-width:70px;
   max-height:70px;
-  margin-top:10px;
+  margin-bottom:10px;
 }
 
 nav .links{
@@ -463,5 +463,12 @@ opacity:0.7;
 
 .credit a:hover{
 opacity:1;
+}
+
+.name{
+  margin-left:10px;
+  font-size: xx-large;
+  margin-top:10px;
+  font-family: 'Times New Roman', Times, serif;
 }
 
