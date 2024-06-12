@@ -18,6 +18,7 @@ body {
 	max-width: 100%;
 	min-height: 60vh;
   min-width:1200px;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 h2 {
@@ -44,6 +45,7 @@ h2 {
 
 .left-container {
   display:flex;
+  width:50vw;
   flex:1;
   height:89vh;
   justify-content:center;
@@ -63,7 +65,7 @@ h2 {
 
 .left-inner-container {
   height:50%;
-  width:80%;
+  width:80vw;
   text-align:center;
   line-height:22px;
 }
@@ -83,8 +85,8 @@ input:focus, textarea:focus{
 
 button {
 	border-radius: 20px;
-	border: 1px solid #00b4cf;
-	background-color: #00b4cf;
+	border: 1px solid #7963F9;
+	background-color: #7963F9;
 	color: #FFFFFF;
 	font-size: 12px;
 	font-weight: bold;

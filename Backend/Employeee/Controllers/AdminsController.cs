@@ -145,7 +145,7 @@ namespace EmployeeManagementSystem.Controllers
 	[ApiController]
 	public class AuthController : ControllerBase
 	{
-		private static Admin _admin = new Admin { Username = "admin", Password = "password" };
+		private static Admin _admin = new Admin { Username = "admin@gmail.com", Password = "admin@123" };
 
 		// POST: api/auth/login
 		[HttpPost("login")]
@@ -158,13 +158,13 @@ namespace EmployeeManagementSystem.Controllers
 			return Unauthorized();
 		}
 
-		[HttpGet("user")]
-        public IActionResult GetUser()
-        {
-            // Check if user is authenticated, for example using JWT or session
-            // For demonstration purposes, assuming user is always authenticated after login
-            return Ok(new { Username = _admin.Username, Password = _admin.Password });
-        }
+		//[HttpGet("user")]
+  //      public IActionResult GetUser()
+  //      {
+  //          // Check if user is authenticated, for example using JWT or session
+  //          // For demonstration purposes, assuming user is always authenticated after login
+  //          return Ok(new { Username = _admin.Username, Password = _admin.Password });
+  //      }
 	}
 }
 

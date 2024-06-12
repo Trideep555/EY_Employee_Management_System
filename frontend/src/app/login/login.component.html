@@ -2,7 +2,7 @@
 <header class="showcase">
   <div class="showcase-content">
     <div class="showcase-top">
-      <h1>LOGIN</h1>
+      <h1 style="font-family:'Times New Roman', Times, serif">LOGIN</h1>
     </div>
     <div class="formm">
         <div class="info">
@@ -10,7 +10,7 @@
           <input class="email" type="password" placeholder="Password" id="password"  [(ngModel)]="Admin.password">
         </div>
         <div class="btn">
-          <button class="btn-primary" type="submit" (click)="Login()">Sign In</button>
+          <button class="btn-primary" type="submit" (click)="Login()" style="font-family: 'Times New Roman', Times, serif;">Sign In</button>
         </div>
        
         <div style="color:red;display: flex;justify-content: center;">{{errorMessage}}</div>
