@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Administrator\\source\\repos\\Employeee\\Employeee\\Employeee.csproj": {}
+    "D:\\EY_Employee_Management_System\\Backend\\Employeee\\Employeee.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Administrator\\source\\repos\\Employeee\\Employeee\\Employeee.csproj": {
+    "D:\\EY_Employee_Management_System\\Backend\\Employeee\\Employeee.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\source\\repos\\Employeee\\Employeee\\Employeee.csproj",
+        "projectUniqueName": "D:\\EY_Employee_Management_System\\Backend\\Employeee\\Employeee.csproj",
         "projectName": "Employeee",
-        "projectPath": "C:\\Users\\Administrator\\source\\repos\\Employeee\\Employeee\\Employeee.csproj",
+        "projectPath": "D:\\EY_Employee_Management_System\\Backend\\Employeee\\Employeee.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrator\\source\\repos\\Employeee\\Employeee\\obj\\",
+        "outputPath": "D:\\EY_Employee_Management_System\\Backend\\Employeee\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
