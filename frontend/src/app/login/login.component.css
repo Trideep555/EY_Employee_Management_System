@@ -221,4 +221,25 @@
     display:flex;
     justify-content: center;
     margin-top: 8%;
+} 
+
+/* div{
+  text-align: center;
+  padding:10px;
+  background-color: ivory;
+  border-radius: 10px;
 }
+
+button{
+  color:black;
+  background-color: green;
+  padding:5px;
+  border-radius: 10px;
+  margin-left:50px;
+}
+
+input{
+  padding:5px;
+  border-radius:10px;
+} */
+
