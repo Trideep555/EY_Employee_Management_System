@@ -8,20 +8,10 @@
 }
 
 body {
-	background: linear-gradient(90deg, #BE8CEF 0%, rgba(61, 46, 232, 0.83) 100%);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	font-family: 'Montserrat', sans-serif;
-  font-size:10px;
-	height: 100vh;
-	margin: -20px 0 50px;
-  
+	background-color:ivory;
 }
 
 .container2 {
-	background-color:ivory;
 	border-radius: 5px;
 	position: relative;
 	overflow: hidden;
@@ -47,7 +37,7 @@ h2 {
 .right-container {
   display:flex;
   flex:1;
-  height:85vh;
+  height:89vh;
   background-color: ivory;
   justify-content:center;
   align-items:center;
@@ -56,10 +46,10 @@ h2 {
 .left-container {
   display:flex;
   flex:1;
-  height:85vh;
+  height:89vh;
   justify-content:center;
   align-items:center;
-    color:ivory;
+  color:ivory;
 }
 
 .left-container p {
