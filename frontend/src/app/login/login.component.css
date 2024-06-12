@@ -1,245 +1,194 @@
-*{
-
-    margin: 0;
-  
-    padding: 0;
-  
-    box-sizing: border-box;
-  
-    font-family: "Poppins", sans-serif;
-  
-  }
-  
-  body{
-  
-  
-    align-items: center;
-  
-    min-height: 100vh;
-  
-    background:url(https://images.unsplash.com/photo-1501975558162-0be7b8ca95ea?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDk2NTI3NDJ8&ixlib=rb-4.0.3&q=85) no-repeat;
-  
-    background-size: cover;
-  
-    background-position: center;
-  
-  }
-  
-  .wrapper{
-  
-    width: 420px;
-  
-    background: transparent;
-  
-    border: 1px solid white;
-  
-    backdrop-filter: blur(4px);
-  
-    color: #fff;
-  
-    border-radius: 12px;
-  
-    padding: 30px 40px;
-  
-    display: none;
-  
-  }
-  
-  .wrapper h1{
-  
-    font-size: 36px;
-  
-    text-align: center;
-  
-  }
-  
-  .wrapper .input-box{
-  
-    position: relative;
-  
-    width: 100%;
-  
-    height: 50px;
-  
-    
-  
-    margin: 30px 0;
-  
-  }
-  
-  .input-box input{
-  
-    width: 100%;
-  
-    height: 100%;
-  
-    background: transparent;
-  
-    border: none;
-  
-    outline: none;
-  
-    border: 1px solid white;
-  
-    border-radius: 40px;
-  
-    font-size: 16px;
-  
-    color: #fff;
-  
-    padding: 20px 45px 20px 20px;
-  
-  }
-  
-  .input-box input::placeholder{
-  
-    color: #fff;
-  
-  }
-  
-  .input-box i{
-  
-    position: absolute;
-  
-    right: 20px;
-  
-    top: 30%;
-  
-    transform: translate(-50%);
-  
-    font-size: 20px;
-  
-  }
-  
-  .wrapper .checkbox1{
-  
-    display: flex;
-  
-    justify-content: space-between;
-  
-    font-size: 14.5px;
-  
-    margin: -15px 0 15px;
-  
-  }
-  
-  .checkbox1 label input{
-  
-    accent-color: #fff;
-  
-    margin-right: 3px;
-  
-  }
-  
-  .checkbox1 a{
-  
-    color: #fff;
-  
-    text-decoration: none;
-  
-  }
-  
-  .checkbox1 a:hover{
-  
-    text-decoration: underline;
-  
-  }
-  
-  .wrapper .btn{
-  
-    width: 100%;
-  
-    height: 45px;
-  
-    background: #fff;
-  
-    border: none;
-  
-    outline: none;
-  
-    border-radius: 40px;
-  
-    
-  
-    border: 1px solid white;
-  
-    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
-  
-    cursor: pointer;
-  
-    font-size: 16px;
-  
-    color: #333;
-  
-    font-weight: 600;
-  
-  }
-  
-  .wrapper .link{
-  
-    font-size: 14.5px;
-  
-    text-align: center;
-  
-    margin: 20px 0 15px;
-  
-  }
-  
-  .link p a{
-  
-    color: #fff;
-  
-    text-decoration: none;
-  
-    font-weight: 600;
-  
-  }
-  
-  .link p a:hover{
-  
-    text-decoration: underline;
-  
-  }
-  
-  #loginForm:checked ~ #loginFormContent,
-  
-  #registerForm:checked ~ #registerFormContent,
-  
-  #forgotForm:checked ~ #forgotFormContent {
-  
-    display: block;
-  
-  }
-  
-      input[type="radio"] {
-  
-        display: none;
-  
-      }
-
-.main{
-    display:flex;
-    justify-content: center;
-    margin-top: 8%;
-} 
-
-/* div{
-  text-align: center;
-  padding:10px;
-  background-color: ivory;
-  border-radius: 10px;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-button{
-  color:black;
-  background-color: green;
-  padding:5px;
-  border-radius: 10px;
-  margin-left:50px;
+body {
+  font-family: "Arial", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: #000;
+  color: #999;
 }
 
-input{
-  padding:5px;
-  border-radius:10px;
-} */
+ul {
+  list-style: none;
+}
 
+h1,
+h2,
+h3,
+h4 {
+  color: #fff;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+.showcase {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: url("https://images.unsplash.com/photo-1608942025318-1191eeade556?q=80&w=1155&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+    no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* text-align: center; */
+}
+
+.showcase::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.65);
+  box-shadow: inset 30px 10px 150px #000000;
+}
+
+.showcase-content {
+  position: relative;
+  z-index: 2;
+  width: 450px;
+  height: 450px;
+  background: rgb(0, 0, 0, 0.65);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items:center;
+  text-align: left;
+  padding: 60px 60px;
+  border-radius: 16px;
+}
+.showcase-top{
+ margin-bottom: 3%;
+}
+.formm h1 {
+  margin-bottom: 20px;
+}
+
+.formm {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.formm .info {
+  padding: 5px 0;
+  margin-bottom: 20px;
+}
+
+.formm .info .email {
+  margin-bottom: 30px;
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  font-size: inherit;
+}
+
+.formm .btn {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.btn-primary {
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  background: #007bff;
+  color: #fff;
+  font-size: inherit;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+}
+
+.help {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+}
+
+.help a {
+  color: #999;
+}
+
+.help a:hover {
+  text-decoration: underline;
+}
+
+/*  input */
+
+input[type="checkbox"] {
+  background: #737373;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  border: 0;
+  height: 16px;
+  left: -20px;
+  width: 16px;
+  margin-right: 5px;
+}
+
+input[type="email"] {
+  background: #343434;
+  color: white;
+}
+
+input[type="password"] {
+  background: #343434;
+  color:white;
+}
+
+/*  input end */
+
+.signup {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.signup p {
+  margin-right: 5px;
+}
+
+.more {
+  font-size: 0.8em;
+  line-height: 1.1em;
+}
+
+.more a {
+  color: rgb(17, 108, 228);
+}
+
+.more a:hover,
+.signup a:hover {
+  text-decoration: underline;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #496989;
+  border-radius: 10px;
+  border: 1px solid #496989;
+}
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}

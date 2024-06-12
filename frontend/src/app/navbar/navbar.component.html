@@ -2,9 +2,18 @@
 <a href="javascript:void(0)" class="logo"><img src="https://cdn3.iconfinder.com/data/icons/team-management/136/19-1024.png" alt="" /></a> 
     <ul class="links flex">
         <li><a href="/" class="active">Home</a></li> &nbsp; &nbsp;
-        <li><a href="/login">Log In</a></li> &nbsp; &nbsp;
         <li><a href="/about">About Us</a></li> &nbsp; &nbsp;
-        <li><a href="/contact">Contact Us</a></li>
+        <li><a href="/contact">Contact Us</a></li>&nbsp; &nbsp;
+        <span *ngIf="isLogin;then condition1;else condition2">
+               
+        </span>
+        <ng-template #condition1>
+            <li><a href="/employee">Employee</a></li>&nbsp; &nbsp;
+            <li><a href="#" style="font-weight: 1000"><button class="btn cus-btn" (click)="Logout()">Log Out</button></a></li> &nbsp; &nbsp;
+        </ng-template>
+        <ng-template #condition2>
+        <li><a href="/login" style="font-weight: 1000"><button class="btn cus-btn">Log In</button></a></li> &nbsp; &nbsp;
+    </ng-template>
         <!--<li><a href="javascript:void(0)">ABOUT</a></li>-->
     </ul>
 </nav>

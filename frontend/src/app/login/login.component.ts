@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule, HttpHeaders } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterOutlet } from '@angular/router';
 import { catchError } from 'rxjs/operators';
+import { Admin } from '../Admin';
 @Component({
   selector: 'app-login',
   standalone: true,
@@ -12,26 +13,27 @@ import { catchError } from 'rxjs/operators';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-  username: string = "";
-  password: string = "";
+  Admin: Admin={
+    username:"",
+    password:""
+  };
   errorMessage: string = "";
 
   constructor(private http: HttpClient) { }
 
-  login() {
-    const apiUrl = 'http://localhost:5172/api/auth/login'; // Replace this with your actual API URL
-    this.http.post(apiUrl, { username: this.username, password: this.password })
-      .pipe(
-        catchError(error => {
-          console.error("Login failed:", error);
-          this.errorMessage = error.message;
-          throw error;
-        })
-      )
-      .subscribe((response: any) => {
-        // Assuming your backend returns a success status code and possibly a token
-        // You can add logic here to handle the response, such as storing the token
-        console.log("Login successful");
-      });
+  Login():void{
+   
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*' // This should be set on the server-side
+    });
+    
+    this.http.post<Admin>("http://localhost:5172/api/auth/login",this.Admin,{headers: headers}).subscribe(data => {
+      window.localStorage.setItem("admin","true"); 
+    window.location.pathname="/employee";
+    
+  },(error)=>{
+    this.errorMessage="Wrong Username or Password";
+  })
   } 
 }

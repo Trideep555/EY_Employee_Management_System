@@ -4,7 +4,10 @@ body{
   padding: 0;
 }
 
-
+.cus-btn{
+  background-color: #7963F9 !important;
+  color:white;
+}
 
 /***********************************
           SCROLL BAR
@@ -183,12 +186,10 @@ fieldset{
 
 .btn{
   text-align:center;
-  border:1px solid white !important;
-  background-color:inherit !important;
-  color:inherit !important;
+  
   text-transform:uppercase;
   padding:0.5rem 1rem;
-  font-weight:300;
+  font-weight:1000;
   font-family:var(--title_font);
 }
 
@@ -311,7 +312,10 @@ nav .links li a{
   font-family:'Times New Roman', Times, serif;
   
 }
-
+nav .links li a:last-child{
+  opacity:0.8;
+  
+}
 nav .links li .active, nav .links li a:hover{
   opacity:1;
 }
